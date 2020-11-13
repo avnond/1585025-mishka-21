@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анна Карелина](https://up.htmlacademy.ru/adaptive/21/user/1585025).
-* Наставник: `Неизвестно`.
+* Наставник: [Алексей Удод] (https://htmlacademy.ru/profile/id523387).
 
 ---
 
