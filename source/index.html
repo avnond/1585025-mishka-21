@@ -30,7 +30,6 @@
           </ul>
           <ul class="main-nav__list user-list site-list">
             <li class="user-list__item">
-              <!-- Что происходит при нажатии? Оформить как ссылку на страницу поиска? Или это просто кнопка? В гайде не указано, ссылка это или нет-->
               <a href="#">
                 Поиск по сайту
               </a>
@@ -45,43 +44,46 @@
       </nav>
 
       <section class="page-header__content">
-        <div class="content__wrapper">
-          <ul class="content__product-sale-list site-list visually-hidden">
-            <li class="content__item">
+        <div class="content-head">
+          <ul class="content-head__product-sale-list site-list visually-hidden">
+            <li class="content-head__item">
               <a href="">Новые поступления</a>
             </li>
-            <li class="content__item">
+            <li class="content-head__item">
               <a href="">Распродажа</a>
             </li>
           </ul>
-
-          <div class="content__text-delivery visually-hidden">
+          <div class="content-head__text-delivery visually-hidden">
             Бесплатная доставка по России
           </div>
         </div>
 
-        <h2 class="content__heading">Милые штуки ручной работы для дома</h2>
+        <h2 class="content-heading">Милые штуки ручной работы для дома</h2>
 
-        <ul class="content__category-list site-list">
-          <li class="category-list__item">
-            <a href="">Предметы интерьера</a>
-          </li>
-          <li class="category-list__item">
-            <a href="">Детские игрушки</a>
-          </li>
-        </ul>
+        <div class="content-bottom">
+          <ul class="content-bottom__category-list site-list">
+            <li class="category-bottom__item">
+              <a href="">Предметы интерьера</a>
+            </li>
+            <li class="category-bottom__item">
+              <a href="">Детские игрушки</a>
+            </li>
+          </ul>
+        </div>
       </section>
     </header>
 
     <main class="page-main">
       <section class="hit-product">
-        <!-- нужно ли заголовкам добавить отдельную обертку? это же разные блоки(заголовок и описание,характеристика товара)-->
-        <h2 class="hit-product__heading">Вязаные корзинки</h2>
-        <h3 class="hit-product__small-heading">Товар недели</h3>
+        <div class="hit-product__headings">
+          <h2 class="hit-product__big-heading">Вязаные корзинки</h2>
+          <h3 class="hit-product__small-heading">Товар недели</h3>
+        </div>
 
-        <p class="hit-product_description">Экологически чистая пряжа,<br>
+        <p class="hit-product__description">Экологически чистая пряжа,<br>
           ручная работа. Доступны в шести<br>расцветках, и трех размерах.
         </p>
+
         <table class="hit-product__specifications">
           <tr>
             <td>Цвет:</td>
@@ -100,6 +102,7 @@
         <p class="hit-product__cost"> Цена: 990 руб.</p>
         <button class="hit-product__button-buy">Заказать</button>
       </section>
+
       <section class="about-us">
         <h2 class="about-us__heading">Коротко о нас:</h2>
         <ul class="about-us__list site-list">
@@ -128,6 +131,7 @@
           </li>
         </ul>
       </section>
+
       <section class="feedback">
         <h2 class="feedback__heading">Отзывы</h2>
         <blockquote class="feedback__comment">
@@ -160,40 +164,38 @@
 
       <section class="contacts">
         <h2 class="contacts__heading">Контакты</h2>
+        <table class="contacts__email">
+          <tr>
+            <td>e-mail:</td>
+            <td><a class="contacts__email-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+          </tr>
+        </table>
+        <table class="contacts__adress">
+          <tr>
+            <td>адрес:</td>
+            <td>г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</td>
+          </tr>
+        </table>
+        <div class="contacts__map">
+          <img src="https://via.placeholder.com/320x454" width="320" height="454" alt="Местоположение магазина «Мишка»">
+        </div>
+        <button class="contacts__write-to-us" type="button">Напишите нам</button>
       </section>
-      <table class="contacts__email">
-        <tr>
-          <td>e-mail:</td>
-          <td><a class="contacts__email-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
-        </tr>
-      </table>
-      <table class="contacts__adress">
-        <tr>
-          <td>адрес:</td>
-          <td>г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</td>
-        </tr>
-      </table>
-      <div class="contacts__map">
-        <img src="https://via.placeholder.com/320x454" width="320" height="454" alt="Местоположение магазина «Мишка»">
-      </div>
-      <button class="contacts__write-to-us" type="button">Напишите нам</button>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <div class="page-footer__logo visually-hidden">
-          <a class="logo" href="#">
-            <img width="86" height="35" src="https://via.placeholder.com/86x35" alt="Онлайн-магазин «Мишка»">
-          </a>
-        </div>
+        <a class="logo visually-hidden" href="#">
+          <img width="86" height="35" src="https://via.placeholder.com/86x35" alt="Онлайн-магазин «Мишка»">
+        </a>
 
         <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://vk.com/htmlacademy" aria-label="Мы в Инстаграме">Мы в Инстаграме</a>
+          <ul class="social__social-list">
+            <li class="social__social-item">
+              <a class="social__social-link social__link--instagram" href="https://vk.com/htmlacademy" aria-label="Мы в Инстаграме">Мы в Инстаграме</a>
             </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фэйсбуке">Мы в Фэйсбуке</a>
+            <li class="social__social-item">
+              <a class="social__social-link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фэйсбуке">Мы в Фэйсбуке</a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--twitter" href="https://twitter.com/" aria-label="Мы в Твиттере">Мы в Твиттере</a>
@@ -201,15 +203,16 @@
           </ul>
         </div>
 
-        <div class="page-footer__copyright">
+        <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано:</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на htmlacademy.ru">HTML Academy</a>
         </div>
       </div>
     </footer>
+
     <section class="modal-basket">
       <div class="modal-basket__wrapper">
-        <div class="modal-basket___headings">
+        <div class="modal-basket__headings">
           <b class="modal-basket__heading">Добавить в корзину</b>
           <p class="modal-basket__hint">Выберите размер:</p>
         </div>
@@ -220,7 +223,7 @@
         </div>
         <button class="modal-basket__add-to-basket">Добавить</button>
       </div>
-
     </section>
   </body>
 </html>
+
