@@ -1,0 +1,137 @@
+// Common
+.filter-fieldset{
+  border: none;
+}
+
+.legends{
+  .opensans-bold;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @lightblue;
+  position: relative;
+}
+
+.legends::after{
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 8px;
+  width: 200px;
+  height: 1px;
+  background-color: @lightblue;
+}
+
+// Checkboxes
+.form-color__item{
+  margin: 30px 0 30px 50px;
+  position: relative;
+  display: block;
+  user-select: none;
+  cursor: pointer;
+
+  .opensans-bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: @black;
+}
+
+.form-color__input + .form-color__check-box::before{
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: -10px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid @grey;
+}
+
+.form-color__input:checked + .form-color__check-box::after{
+  content: "";
+  position: absolute;
+  left: -41px;
+  top: 2px;
+  width: 23px;
+  height: 16px;
+  background-image: url(../../img/filter/Tick.svg);
+}
+
+// Radiobuttons
+
+.form-type__item{
+  margin-bottom: 30px;
+  position: relative;
+  display: block;
+  user-select: none;
+  cursor: pointer;
+
+  .opensans-bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: @black;
+}
+
+.form-type__input + .form-type__radio-box::before{
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: -12px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid @grey;
+  border-radius: 50%;
+}
+
+.form-type__input:checked + .form-type__radio-box::after{
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  background-color: @lightblue;
+  border: 2px solid @lightblue;
+  border-radius: 50%;
+}
+
+//User Name
+.form-name__label{
+  display: block;
+  .opensans-bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: @black;
+  margin-bottom: 10px;
+}
+
+.form-name__input{
+  .contacts-input;
+  margin-bottom: 17px;
+}
+
+// User contacts
+.form-wishes__area{
+  width: 260px;
+  height: 142px;
+  padding-left: 17px;
+  padding-top: 17px;
+  box-sizing: border-box;
+  resize: none;
+  border: 2px solid @grey;
+}
+
+.form-tel__legend,
+.form-email__legend,
+.form-wishes__legend{
+  margin-bottom: 5px;
+}
+
+// Filter hint
+
+.filter__hint{
+  .opensans-400;
+  font-size: 14px;
+  line-height: 16px;
+  color: @grey;
+}
+
