@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="page-header">
-      <h1>Онлайн-магазин «Мишка»</h1>
-      <a class="logo" href="#">
+      <h1 class="visually-hidden">Онлайн-магазин «Мишка»</h1>
+      <a class="logo site-link" href="#">
         <img width="86" height="35" src="https://via.placeholder.com/86x35" alt="Онлайн-магазин «Мишка»">
       </a>
       <nav class="main-nav">
@@ -16,25 +17,25 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="catalog.html">
+            <li class="main-nav__item">
+              <a class="site-link" href="catalog.html">
                 Каталог товаров
               </a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">
+            <li class="main-nav__item">
+              <a class="site-link" href="form.html">
                 Вязание на заказ
               </a>
             </li>
           </ul>
           <ul class="main-nav__list user-list site-list">
             <li class="user-list__item">
-              <a href="#">
+              <a class="site-link" href="#">
                 Поиск по сайту
               </a>
             </li>
             <li class="user-list__item">
-              <a href="#">
+              <a class="site-link" href="#">
                 Корзина: пока пуста
               </a>
             </li>
@@ -46,10 +47,10 @@
         <div class="content-head">
           <ul class="content-head__product-sale-list site-list visually-hidden">
             <li class="content-head__item">
-              <a href="">Новые поступления</a>
+              <a class="site-link"href="">Новые поступления</a>
             </li>
             <li class="content-head__item">
-              <a href="">Распродажа</a>
+              <a class="site-link" href="">Распродажа</a>
             </li>
           </ul>
           <div class="content-head__text-delivery visually-hidden">
@@ -57,15 +58,15 @@
           </div>
         </div>
 
-        <h2 class="content-heading">Милые штуки ручной работы для дома</h2>
+        <h2 class="content-heading big-heading">Милые штуки ручной работы для дома</h2>
 
         <div class="content-bottom">
           <ul class="content-bottom__category-list site-list">
             <li class="category-bottom__item">
-              <a href="">Предметы интерьера</a>
+              <a class="category-bottom__link site-link" href="">Предметы интерьера</a>
             </li>
             <li class="category-bottom__item">
-              <a href="">Детские игрушки</a>
+              <a class="category-bottom__link site-link" href="">Детские игрушки</a>
             </li>
           </ul>
         </div>
@@ -75,7 +76,7 @@
     <main class="page-main">
       <section class="hit-product">
         <div class="hit-product__headings">
-          <h2 class="hit-product__big-heading">Вязаные корзинки</h2>
+          <h2 class="hit-product__big-heading site-heading">Вязаные корзинки</h2>
           <h3 class="hit-product__small-heading">Товар недели</h3>
         </div>
 
@@ -99,17 +100,18 @@
         </table>
         <img class="hit-product__image" src="https://via.placeholder.com/260x315" width="260" height="315" alt="Три вязаные корзинки, две серо-зеленые, одна розовая">
         <p class="hit-product__cost"> Цена: 990 руб.</p>
-        <button class="hit-product__button-buy">Заказать</button>
+        <button class="hit-product__button-buy site-button" type="button">Заказать</button>
       </section>
 
       <section class="about-us">
-        <h2 class="about-us__heading">Коротко о нас:</h2>
+        <h2 class="about-us__heading site-heading">Коротко о нас:</h2>
         <ul class="about-us__list site-list">
           <li class="about-us__advantage">
             <div class="about-us__image"></div>
             Экологически<br>чистые материалы
           </li>
-          <li class="about-us__advantage"><div class="about-us__image"></div>
+          <li class="about-us__advantage">
+            <div class="about-us__image"></div>
             Скандинавский стиль<br>по российской цене
           </li>
           <li class="about-us__advantage">
@@ -132,7 +134,7 @@
       </section>
 
       <section class="feedback">
-        <h2 class="feedback__heading">Отзывы</h2>
+        <h2 class="feedback__heading site-heading">Отзывы</h2>
         <blockquote class="feedback__comment">
           <p>Я молодая мама, но всё равно<br>фотографии не набирали и близко<br>такого количества лайков, как<br>у популярных инстамамочек.<br>
             В отчаянии, я накупила<br>аксессуаров и игрушек в Мишке,<br>
@@ -155,18 +157,18 @@
         </blockquote>
 
         <div class="feedback__switchers">
-          <button class="feedback__switch-previous" type="button"></button>
-          <button class="feedback__switch-next" type="button"></button>
+          <button class="feedback__switch-previous" type="button">«--</button>
+          <button class="feedback__switch-next" type="button">--»</button>
         </div>
-        <button class="feedback__button-write" type="button">Написать</button>
+        <button class="feedback__button-write site-button" type="button">Написать</button>
       </section>
 
       <section class="contacts">
-        <h2 class="contacts__heading">Контакты</h2>
+        <h2 class="contacts__heading site-heading">Контакты</h2>
         <table class="contacts__email">
           <tr>
             <td>e-mail:</td>
-            <td><a class="contacts__email-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+            <td><a class="contacts__email-link site-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
           </tr>
         </table>
         <table class="contacts__adress">
@@ -178,49 +180,70 @@
         <div class="contacts__map">
           <img src="https://via.placeholder.com/320x454" width="320" height="454" alt="Местоположение магазина «Мишка»">
         </div>
-        <button class="contacts__write-to-us" type="button">Напишите нам</button>
+        <button class="contacts__write-to-us site-button" type="button">Напишите нам</button>
       </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="logo visually-hidden" href="#">
+        <a class="logo site-link visually-hidden" href="#">
           <img width="86" height="35" src="https://via.placeholder.com/86x35" alt="Онлайн-магазин «Мишка»">
         </a>
 
         <div class="page-footer__social social">
-          <ul class="social__social-list">
+          <ul class="social__social-list site-list">
             <li class="social__social-item">
-              <a class="social__social-link social__link--instagram" href="https://vk.com/htmlacademy" aria-label="Мы в Инстаграме">Мы в Инстаграме</a>
+              <a class="social__social-link social__link--instagram site-link" href="https://vk.com/htmlacademy" aria-label="Мы в Инстаграме">Мы в Инстаграме</a>
             </li>
             <li class="social__social-item">
-              <a class="social__social-link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фэйсбуке">Мы в Фэйсбуке</a>
+              <a class="social__social-link social__link--facebook site-link" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фэйсбуке">Мы в Фэйсбуке</a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="https://twitter.com/" aria-label="Мы в Твиттере">Мы в Твиттере</a>
+              <a class="social__link social__link--twitter site-link" href="https://twitter.com/" aria-label="Мы в Твиттере">Мы в Твиттере</a>
             </li>
           </ul>
         </div>
 
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на htmlacademy.ru">HTML Academy</a>
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link site-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на htmlacademy.ru">HTML Academy</a>
         </div>
       </div>
     </footer>
 
     <section class="modal-basket">
       <div class="modal-basket__wrapper">
-        <div class="modal-basket__headings">
-          <b class="modal-basket__heading">Добавить в корзину</b>
-          <p class="modal-basket__hint">Выберите размер:</p>
-        </div>
-        <div class="modal-basket__sizes">
-          <button class="modal-basket__button-size">S</button>
-          <button class="modal-basket__button-size">M</button>
-          <button class="modal-basket__button-size">L</button>
-        </div>
-        <button class="modal-basket__add-to-basket">Добавить</button>
+        <b class="modal-basket__heading">Добавить в корзину</b>
+
+        <form class="modal-basket__form" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="modal-basket__sizes">
+            <legend class="modal-basket__legend">Выберите размер:</legend>
+            <ul class="modal-basket__list site-list">
+              <li class="modal-basket__item">
+                <label for="filter-size-S">
+                  <input class="modal-basket__input visually-hidden" type="radio" name="size" value="S" id="filter-size-S" checked>
+                  <span class="modal-basket__radio-box"></span>
+                  S
+                </label>
+              </li>
+              <li class="modal-basket__item">
+                <label for="filter-size-M">
+                  <input class="modal-basket__input visually-hidden" type="radio" name="size" value="M" id="filter-size-M">
+                  <span class="modal-basket__radio-box"></span>
+                  M
+                </label>
+              </li>
+              <li class="modal-basket__item">
+                <label for="filter-size-L">
+                  <input class="modal-basket__input visually-hidden" type="radio" name="size" value="L" id="filter-size-L">
+                  <span class="modal-basket__radio-box"></span>
+                  L
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="modal-basket__add-to-basket" type="submit">Добавить</button>
+        </form>
       </div>
     </section>
   </body>
