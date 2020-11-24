@@ -2,42 +2,40 @@
 <html class="form-page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="form-page__body">
     <header class="page-header">
-      <h1>Онлайн-магазин «Мишка»</h1>
+      <h1 class="visually-hidden">Онлайн-магазин «Мишка»</h1>
       <a class="logo" href="index.html">
         <img width="86" height="35" src="https://via.placeholder.com/86x35" alt="Онлайн-магазин «Мишка»">
       </a>
-
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="catalog.html">
+            <li class="main-nav__item">
+              <a class="site-link" href="catalog.html">
                 Каталог товаров
               </a>
             </li>
-            <li class="site-list__item">
-              <a href="#">
+            <li class="main-nav__item">
+              <a class="site-link" href="#">
                 Вязание на заказ
               </a>
             </li>
           </ul>
           <ul class="main-nav__list user-list site-list">
             <li class="user-list__item">
-              <a href="#">
+              <a class="site-link" href="#">
                 Поиск по сайту
               </a>
             </li>
             <li class="user-list__item">
-              <a href="#">
+              <a class="site-link" href="#">
                 Корзина: пока пуста
               </a>
             </li>
@@ -49,17 +47,17 @@
         <div class="content-head">
           <ul class="content-head__product-sale-list site-list visually-hidden">
             <li class="content-head__item">
-              <a href="">Новые поступления</a>
+              <a class="site-link" href="">Новые поступления</a>
             </li>
             <li class="content-head__item">
-              <a href="">Распродажа</a>
+              <a class="site-link" href="">Распродажа</a>
             </li>
           </ul>
           <div class="content-head__text-delivery visually-hidden">
             Бесплатная доставка по России
           </div>
         </div>
-        <h2 class="form-content-heading">Вязание на заказ</h2>
+        <h2 class="form-content-heading big-heading">Вязание на заказ</h2>
         <p class="form-content-description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       </section>
     </header>
@@ -67,8 +65,8 @@
     <main class="form-main">
       <div class="form-main__wrapper">
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="filter__form-type form-type">
-            <legend class="form-type__legend">Тип</legend>
+          <fieldset class="filter__form-type form-type filter-fieldset">
+            <legend class="form-type__legend legends">Тип</legend>
             <ul class="form-type__list site-list">
               <li class="form-type__item">
                 <label for="filter-type-accessory">
@@ -87,8 +85,8 @@
             </ul>
           </fieldset>
 
-          <fieldset class="filter__form-color form-color">
-            <legend class="form-color__legend">Цвет</legend>
+          <fieldset class="filter__form-color form-color filter-fieldset">
+            <legend class="form-color__legend legends">Цвет</legend>
 
             <label class="form-color__item">
               <input class="form-color__input visually-hidden" type="checkbox" name="color" value="white" id="filter-color-white" checked>
@@ -127,39 +125,39 @@
             </label>
           </fieldset>
 
-          <fieldset class="filter__form-name form-name">
-            <legend class="form-name__legend">ФИО</legend>
+          <fieldset class="filter__form-name form-name filter-fieldset">
+            <legend class="form-name__legend legends">ФИО</legend>
             <div>
               <label class="form-name__label" for="user-name">Имя:</label>
-              <input class="form-name__input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
+              <input class="form-name__input contacts-input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
             </div>
             <div>
               <label class="form-name__label" for="user-name">Фамилия:</label>
-              <input class="form-name__input" type="text" name="user-name" id="user-lastname" placeholder="Укажите фамилию*" required>
+              <input class="form-name__input contacts-input" type="text" name="user-name" id="user-lastname" placeholder="Укажите фамилию*" required>
             </div>
             <div>
               <label class="form-name__label" for="user-name">Отчество:</label>
-              <input class="form-name__input" type="text" name="user-name" id="user-middlename" placeholder="Отчество, если желаете">
+              <input class="form-name__input contacts-input" type="text" name="user-name" id="user-middlename" placeholder="Отчество, если желаете">
             </div>
           </fieldset>
 
-          <fieldset class="filter__form-tel form-tel">
-            <legend class="form-tel__legend">Тел</legend>
-            <input class="form-tel__input" type="tel" name="user-tel" placeholder="+7 XXX XXX XX XX*" required>
+          <fieldset class="filter__form-tel form-tel filter-fieldset">
+            <legend class="form-tel__legend legends">Тел</legend>
+            <input class="form-tel__input contacts-input" type="tel" name="user-tel" placeholder="+7 XXX XXX XX XX*" required>
           </fieldset>
 
-          <fieldset class="filter__form-email form-email">
-            <legend class="form-email__legend">E-mail</legend>
-            <input class="form-email__input" type="email" name="user-email" placeholder="Ваш Email*" required>
+          <fieldset class="filter__form-email form-email filter-fieldset">
+            <legend class="form-email__legend legends">E-mail</legend>
+            <input class="form-email__input contacts-input" type="email" name="user-email" placeholder="Ваш Email*" required>
           </fieldset>
 
-          <fieldset class="filter__form-wishes form-wishes">
-            <legend class="form-wishes__legend">Доп</legend>
-            <textarea class="form-wishes__area" rows="5" cols="22" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea></p>
+          <fieldset class="filter__form-wishes form-wishes filter-fieldset">
+            <legend class="form-wishes__legend legends">Доп</legend>
+            <textarea class="form-wishes__area contacts-input" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea></p>
           </fieldset>
 
           <p class="filter__hint">*Поля обязательны для заполнения</p>
-          <button class="filter__button-post" type="submit">Отправить заказ</button>
+          <button class="filter__button-post site-button" type="submit">Отправить заказ</button>
         </form>
       </div>
     </main>
@@ -185,7 +183,8 @@
 
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано:</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на htmlacademy.ru">HTML Academy</a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на htmlacademy.ru"></a>
+          </div>
         </div>
       </div>
     </footer>
