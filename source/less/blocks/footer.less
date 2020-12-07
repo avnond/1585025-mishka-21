@@ -1,5 +1,96 @@
 .page-footer{
+  min-height: 160px;
   background-color: @lightgrey;
+
+  @media (min-width: @tablet-width){
+    min-height: 143px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.page-footer__wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width){
+    width: 668px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width){
+    width: 1050px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-footer__wrapper .logo{
+  display: none;
+  @media (min-width: @tablet-width){
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+}
+
+// Социальные сети
+.social__social-list{
+  width: 142px;
+  margin: 25px auto 57px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width){
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.social__social-item{
+  width: 25px;
+  height: 29px;
+  background-image: url(../../img/footer/instagram-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &:nth-child(2){
+    background-image: url(../../img/footer/facebook-icon.svg);
+  }
+
+  &:nth-child(3){
+    background-image: url(../../img/footer/twitter-icon.svg);
+  }
+}
+
+// Копирайт
+.page-footer__copyright{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright__html-logo{
+  width: 27px;
+  height: 34px;
+  background-image: url(../../img/footer/html-logo.svg);
+  background-repeat: no-repeat;
+  background-size: 27px 34px;
 }
 
 .copyright__text{
@@ -9,12 +100,6 @@
   display: flex;
   align-items: center;
   color: @black;
-}
 
-.copyright__logo{
-  width: 27px;
-  height: 34px;
-  background-image: url(../../img/htmlacademy.svg);
-  background-repeat: no-repeat;
-  background-size: 27px 34px;
+  margin-right: 27px;
 }

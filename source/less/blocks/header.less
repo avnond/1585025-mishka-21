@@ -1,37 +1,194 @@
 .page-header{
+  width: 100%;
   background-color: @white;
+  background-color: grey;
+
+  @media (min-width: @tablet-width){
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 
-.main-nav__item,
-.user-list__item{
-  font-family: "Open Sans", "Tahoma", sans-serif;
-  font-style: normal;
-  font-weight: bold;
+// Navigation
+.main-nav{
+  width: 100%;
+
+  @media (min-width: @tablet-width){
+    width: max-content;
+    order: 2;
+  }
+  background-color: yellow;
+}
+
+.main-nav__list{
+  width: max-content;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  @media (min-width: @tablet-width){
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+  }
+}
+
+.main-nav__item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 79px;
+  .opensans-bold;
   font-size: 17px;
   line-height: 24px;
-  display: flex;
-  align-items: center;
   color: @black;
+// временное подчеркивание
+  border-bottom: 2px solid grey;
+
+  @media (min-width: @tablet-width){
+    font-size: 15px;
+    border-bottom: none;
+  }
 }
 
-.category-bottom__item{
+// Поиск + корзина
+.user-shopping{
+  width: 100%;
   .opensans-bold;
-  width: 320px;
-  height: 103px;
-  font-size: 19px;
+  font-size: 17px;
+  line-height: 24px;
+  color: @black;
+
+  @media (min-width: @tablet-width){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: max-content;
+    border-bottom: none;
+    justify-self: flex-end;
+  }
+}
+
+.user-shopping__list{
+  width: max-content;
+  margin: 0 auto;
+  @media (min-width: @tablet-width){
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+  }
+}
+
+.user-shopping__item{
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 79px;
+  // временное подчеркивание
+  border-bottom: 2px solid grey;
+
+  @media (min-width: @tablet-width){
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+// Навигация распродажа
+.page-nav{
+  display: none;
+  @media (min-width: @tablet-width){
+    display: none;
+  }
+}
+
+// Text delievery
+.delivery-info{
+  .opensans-400;
+  font-size: 15px;
   line-height: 24px;
   display: flex;
   align-items: center;
-  color: @white;
-  background-color: @lightblue;
+  text-align: right;
+  color: @grey;
+  display: none;
+  @media (min-width: @tablet-width){
+    position: absolute;
+    top: 85px;
+    right: 50px;
+    display: block;
+    order: 4;
+  }
 }
 
-.category-bottom__item:nth-child(2){
-  background-color: @bg-kids-toys;
+// Page Heading
+.content-heading{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: @lightgrey;
 }
 
-// Catalog
+.content-heading__text{
+  margin: 73px auto;
+  width: max-content;
+  text-align: center;
+  background-color: lime;
+}
 
+// Button-toggle mobile
+.logo-block{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (min-width: @tablet-width){
+    width: max-content;
+    margin-right: auto;
+  }
+}
+
+.button-burger__toggle{
+  @media (min-width: @tablet-width){
+    display: none;
+  }
+}
+
+// Logotype
+.logo{
+  z-index: 1;
+  width: 86px;
+  height: 35px;
+  margin: 0 auto;
+  background-image: url(../../img/header/mishka-logo-mobile.svg);
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width){
+    width: 113px;
+    height: 46px;
+    background-image: url(../../img/header/mishka-logo-tablet.svg);
+    justify-self: flex-start;
+    align-self: center;
+  }
+}
+
+// Catalog header
 .catalog-page-header__content{
-background-color: @lightgrey;
+  background-color: @lightgrey;
 }
+
+

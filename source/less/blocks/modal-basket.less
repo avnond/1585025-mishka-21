@@ -1,9 +1,19 @@
 .modal-basket{
+  width: 100%;
+  height: 336px;
+  position: absolute;
+  top: 1046px;
   background: @white;
-  mix-blend-mode: normal;
   border: 1px solid #C6C6C6;
   box-shadow: 0px 5px 10px rgba(0, 1, 1, 0.25);
 }
+
+.modal-basket__wrapper{
+  width: 260px;
+  padding: 0 0px;
+  margin: 0 auto;
+}
+
 .modal-basket__heading{
   .opensans-bold;
   font-size: 25px;
@@ -13,37 +23,107 @@
   text-align: center;
   text-transform: uppercase;
   color: @black;
+  width: 175px;
+  margin: 28px auto 14px auto;
 }
 
 .modal-basket__legend{
+  display: block;
   .opensans-400;
   font-size: 15px;
   line-height: 30px;
   color: @grey;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .modal-basket__sizes{
+  width: 260px;
   border: none;
+  padding: 0 35px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .modal-basket__list{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 49px;
 }
 
 .modal-basket__item{
+  position: relative;
+  cursor: pointer;
+  margin-right: 75px;
+
   .opensans-bold;
   font-size: 17px;
   line-height: 16px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   text-transform: uppercase;
-  color: #444444;
+  color: @grey;
+}
+
+.modal-basket__item:last-child{
+  margin: 0;
+  margin-right: 0;
+}
+
+// Radiobuttons
+
+.modal-basket__label{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.modal-basket__input + label::before{
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -19px;
+  width: 78px;
+  height: 48px;
+  border: 2px solid @grey;
+  opacity: 0.1;
+}
+
+.modal-basket__input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -19px;
+  width: 78px;
+  height: 48px;
+  border: 2px solid @lightblue;
+}
+
+.modal-basket__input--M + label::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: -19px;
+  width: 78px;
+  height: 48px;
+  border: 2px solid @grey;
+  opacity: 0.1;
+}
+
+.modal-basket__input--M:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: -19px;
+  width: 78px;
+  height: 48px;
+  border: 2px solid @lightblue;
 }
 
 .modal-basket__add-to-basket{
-  padding: 18px 68px;
+  width: 260px;
+  padding: 20px 82px;
   background-color: @lightblue;
   border: none;
   .opensans-bold;

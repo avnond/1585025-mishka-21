@@ -1,12 +1,108 @@
-.feedback__comment{
+.feedback{
+  width: 100%;
+  margin-bottom: 130px;
+}
+
+.feedback__wrapper{
+  width:  260px;
+  height: auto;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    width: 668px;
+  }
+
+  @media (min-width: @desktop-width){
+    margin: 0 auto;
+    width: 1050px;
+    padding: 0 50px;
+  }
+}
+
+.feedback__heading{
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width){
+    margin: 0;
+    margin-top: 82px;
+    width: max-content;
+  }
+
+  @media (min-width: @desktop-width){
+    margin-left: 174px;
+    margin-top: 78px;
+  }
+}
+
+// .feedback__comment{
+//   .opensans-400;
+//   font-size: 15px;
+//   line-height: 30px;
+//   align-items: center;
+//   color: @grey;
+//   margin: 0;
+//   padding: 0;
+
+//   @media (min-width: @tablet-width){
+//     font-size: 17px;
+//   }
+
+//   background-color: orange;
+// }
+
+.feedback__comment-text{
   .opensans-400;
   font-size: 15px;
   line-height: 30px;
   align-items: center;
   color: @grey;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 33px;
+
+  @media (min-width: @tablet-width){
+    margin: 0;
+    margin-bottom: 61px;
+    font-size: 17px;
+    width: 668px;
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width){
+    width: 806px;
+    margin-left: 174px;
+    margin-bottom: 44px;
+  }
+}
+
+.feedback__user-info{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width){
+    order: 2;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width){
+    margin-bottom: 96px;
+    margin-left: 174px;
+  }
+
 }
 
 .feedback__user-name{
+  margin: 0;
+  padding: 0;
   .opensans-bold;
   font-size: 17px;
   line-height: 24px;
@@ -14,13 +110,81 @@
   align-items: center;
   color: @black;
 
+  @media (min-width: @tablet-width){
+    font-size: 18px;
+    width: max-content;
+  }
+
+  @media (min-width: @desktop-width){
+    font-size: 17px;
+  }
 }
 
 .feedback__user-account{
+  margin: 0;
+  padding: 0;
   .opensans-400;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 30px;
-  display: flex;
   align-items: center;
   color: @grey;
+  @media (min-width: @tablet-width){
+    font-size: 17px;
+    width: max-content;
+  }
+}
+
+// Переключатели
+.feedback__switchers{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width){
+    order: 2;
+    margin: 0;
+  }
+}
+
+.feedback-switcher{
+  width: 130px;
+  height: 52px;
+  border: 1px solid @special-lightgrey;
+  background-color: @white;
+
+  @media (min-width: @tablet-width){
+    border: none;
+  }
+
+  @media (min-width: @desktop-width){
+    width: 90px;
+  }
+}
+
+.feedback__switch-previous{
+  border-left: none;
+  background-image: url(../../img/feedback/feedback-arrow.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 50% 50%;
+  transform: rotate(180deg);
+}
+
+.feedback__switch-next{
+  background-image: url(../../img/feedback/feedback-arrow.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 50% 50%;
+}
+
+// Кнопка "Написать"
+.feedback__button-write{
+  width: 260px;
+  margin-bottom: 89px;
+  @media (min-width: @tablet-width){
+    width: 175px;
+    margin: 0;
+    margin-top: 79px;
+    margin-bottom: 40px;
+  }
 }

@@ -1,37 +1,181 @@
+.hit-product{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 73px;
+
+  @media (min-width: @tablet-width){
+    margin-bottom: 125px;
+  }
+}
+
+.hit-product__wrapper{
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 260px;
+
+  @media (min-width: @tablet-width){
+    padding: 0 50px;
+    width: 668px;
+  }
+
+  @media (min-width: @desktop-width){
+    padding: 0 50px;
+    width: 1050px;
+  }
+}
+
+.hit-product__content-wrapper{
+  @media (min-width: @tablet-width){
+    height: 417px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width){
+    position: relative;
+    margin: 0;
+    margin-left: auto;
+
+    width: 875px;
+    height: 483px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+// Заголовки
+.hit-product__headings{
+  @media (min-width: @tablet-width){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width){
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    margin-left: 32px;
+    margin-bottom: 35px;
+  }
+}
+
 .hit-product__big-heading{
-  .opensans-bold;
-  font-size: 25px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  color: @black;
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0;
+  @media (min-width: @tablet-width){
+    margin: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  @media (min-width: @tablet-width){
+    order: 2;
+  }
 }
 
 .hit-product__small-heading{
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
   .opensans-bold;
   font-size: 17px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
   text-transform: uppercase;
   color: @bg-kids-toys;
+
+  @media (min-width: @tablet-width){
+    margin: 0;
+    width: min-content;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width){
+    margin-right: 43px;
+  }
 }
 
-.hit-product__description,
-.hit-product__specifications{
+.hit-product__description{
+  width: max-content;
   .opensans-400;
   font-size: 15px;
   line-height: 24px;
-  display: flex;
-  align-items: center;
   color: @grey;
+
+  @media (min-width: @tablet-width){
+    margin: 0;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @desktop-width){
+    margin: 0;
+    margin-bottom: 68px;
+  }
+}
+
+// Table
+.hit-product__specifications{
+  width: max-content;
+  margin-bottom: 28px;
+  .opensans-400;
+  font-size: 15px;
+  line-height: 20px;
+  color: @grey;
+
+  @media (min-width: @tablet-width){
+    margin: 0;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width){
+    margin-bottom: 110px;
+  }
 }
 
 .hit-product__specifications{
   line-height: 20px;
 }
 
+.table-specifications__first-col{
+  position: relative;
+  height: 36px;
+  width: 97px;
+
+  &::after{
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    content: "";
+    width: 260px;
+    height: 1px;
+    background-color: @special-lightgrey;
+
+    @media (min-width: @tablet-width){
+      width: 292px;
+    }
+  }
+}
+
+.table-specifications__second-col{
+  height: 36px;
+  width: 162px;
+}
+
+// Блок "Цена"
 .hit-product__cost{
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: max-content;
   .opensans-bold;
   font-size: 17px;
   line-height: 24px;
@@ -39,5 +183,59 @@
   align-items: center;
   text-align: center;
   color: @grey;
+
+  @media (min-width: @tablet-width){
+    width: max-content;
+    font-size: 20px;
+    line-height: 24px;
+
+    margin-bottom: 10px;
+    margin-left: 72px;
+  }
+
+  @media (min-width: @desktop-width){
+    width: max-content;
+    margin: 0;
+    margin-left: 73px;
+  }
 }
 
+// Блок "Изображение"
+.hit-product__image{
+  margin-bottom: 26px;
+  @media (min-width: @tablet-width){
+    align-self: flex-end;
+    margin: 0;
+    margin-top: auto;
+    width: 334px;
+    height: 404px;
+    order: 3;
+  }
+
+  @media (min-width: @desktop-width){
+    position: absolute;
+    top: -153px;
+    margin: 0;
+    margin-top: auto;
+    margin-left: auto;
+    width: 525px;
+    height: 636px;
+    order: 3;
+    z-index: -1;
+  }
+}
+
+// Кнопка "Заказать"
+.hit-product__button-buy{
+  width: 260px;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: @tablet-width){
+    width: 292px;
+    height: 52px;
+    margin: 0;
+    margin-top: auto;
+  }
+}

@@ -2,19 +2,25 @@
 <html class="form-page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="form-page__body">
     <header class="page-header">
       <h1 class="visually-hidden">Онлайн-магазин «Мишка»</h1>
-      <a class="logo" href="index.html">
-        <img width="86" height="35" src="https://via.placeholder.com/86x35" alt="Онлайн-магазин «Мишка»">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+
+      <div class="logo-block">
+        <div class="logo">
+          <a class="logo__link site-link" href="index.html"></a>
+        </div>
+
+        <button class="button-burger__toggle" type="button">X
           <span class="visually-hidden">Открыть меню</span>
         </button>
+      </div>
+
+      <nav class="main-nav">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="main-nav__item">
@@ -22,49 +28,63 @@
                 Каталог товаров
               </a>
             </li>
+
             <li class="main-nav__item">
               <a class="site-link" href="#">
                 Вязание на заказ
               </a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list site-list">
-            <li class="user-list__item">
-              <a class="site-link" href="#">
-                Поиск по сайту
-              </a>
-            </li>
-            <li class="user-list__item">
-              <a class="site-link" href="#">
-                Корзина: пока пуста
-              </a>
-            </li>
-          </ul>
         </div>
       </nav>
 
-      <section class="page-header__content">
-        <div class="content-head">
-          <ul class="content-head__product-sale-list site-list visually-hidden">
-            <li class="content-head__item">
-              <a class="site-link" href="">Новые поступления</a>
-            </li>
-            <li class="content-head__item">
-              <a class="site-link" href="">Распродажа</a>
-            </li>
-          </ul>
-          <div class="content-head__text-delivery visually-hidden">
-            Бесплатная доставка по России
-          </div>
-        </div>
-        <h2 class="form-content-heading big-heading">Вязание на заказ</h2>
-        <p class="form-content-description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      </section>
+      <div class="user-shopping">
+        <ul class="user-shopping__list site-list">
+          <li class="user-shopping__item search">
+            <a class="search__link site-link" href="#">
+              <span class="search__text">Поиск по сайту</span>
+              <span class="search__img"></span>
+            </a>
+          </li>
+
+          <li class="user-shopping__item basket">
+            <span class="basket__img"></span>
+            <a class="basket__link site-link" href="#">
+              Корзина: пока пуста
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="page-nav">
+        <ul class="page-nav__list site-list">
+          <li class="page-nav__item">
+            <a class="site-link"href="">Новые поступления</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="site-link" href="">Распродажа</a>
+          </li>
+        </ul>
+      </div>
+
+      <p class="delivery-info">
+        Бесплатная доставка по России
+      </p>
+
+      <h2 class="content-heading site-heading">
+        <span class="form-content-heading__text content-heading__text">
+          Вязание на заказ
+        </span>
+      </h2>
     </header>
 
     <main class="form-main">
       <div class="form-main__wrapper">
+        <p class="form-main__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+
           <fieldset class="filter__form-type form-type filter-fieldset">
             <legend class="form-type__legend legends">Тип</legend>
             <ul class="form-type__list site-list">
@@ -78,7 +98,7 @@
               <li class="form-type__item">
                 <label for="filter-type-toy">
                   <input class="form-type__input visually-hidden " type="radio" name="type" value="toy" id="filter-type-toy">
-                  <span class="form-type__radio-box"></span>
+                  <span class="form-type__radio-box-2 form-type__radio-box"></span>
                   Детская игрушка
                 </label>
               </li>
@@ -132,12 +152,12 @@
               <input class="form-name__input contacts-input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
             </div>
             <div>
-              <label class="form-name__label" for="user-name">Фамилия:</label>
-              <input class="form-name__input contacts-input" type="text" name="user-name" id="user-lastname" placeholder="Укажите фамилию*" required>
+              <label class="form-name__label" for="user-lastname">Фамилия:</label>
+              <input class="form-name__input contacts-input" type="text" name="user-lastname" id="user-lastname" placeholder="Укажите фамилию*" required>
             </div>
             <div>
-              <label class="form-name__label" for="user-name">Отчество:</label>
-              <input class="form-name__input contacts-input" type="text" name="user-name" id="user-middlename" placeholder="Отчество, если желаете">
+              <label class="form-name__label" for="user-middlename">Отчество:</label>
+              <input class="form-name__input contacts-input" type="text" name="user-middlename" id="user-middlename" placeholder="Отчество, если желаете">
             </div>
           </fieldset>
 
@@ -161,29 +181,27 @@
         </form>
       </div>
     </main>
+
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="logo visually-hidden" href="#">
-          <img width="86" height="35" src="https://via.placeholder.com/86x35" alt="Онлайн-магазин «Мишка»">
-        </a>
+        <a class="logo site-link" href="#"></a>
 
-        <div class="page-footer__social social">
-          <ul class="social__social-list">
-            <li class="social__social-item">
-              <a class="social__social-link social__link--instagram" href="https://vk.com/htmlacademy" aria-label="Мы в Инстаграме">Мы в Инстаграме</a>
-            </li>
-            <li class="social__social-item">
-              <a class="social__social-link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фэйсбуке">Мы в Фэйсбуке</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--twitter" href="https://twitter.com/" aria-label="Мы в Твиттере">Мы в Твиттере</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="social__social-list site-list">
+          <li class="social__social-item">
+            <a class="social__social-link social__link--instagram site-link" href="https://vk.com/htmlacademy" aria-label="Мы в Инстаграме"></a>
+          </li>
+          <li class="social__social-item">
+            <a class="social__social-link social__link--facebook site-link" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фэйсбуке"></a>
+          </li>
+          <li class="social__social-item">
+            <a class="social__link social__link--twitter site-link" href="https://twitter.com/" aria-label="Мы в Твиттере"></a>
+          </li>
+        </ul>
 
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на htmlacademy.ru"></a>
+          <b class="copyright__text">Разработано</b>
+          <div class="copyright__html-logo">
+            <a class="copyright__link site-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на htmlacademy.ru"></a>
           </div>
         </div>
       </div>
