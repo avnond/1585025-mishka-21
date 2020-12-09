@@ -1,15 +1,30 @@
 .page-header{
   width: 100%;
   background-color: @white;
-  background-color: grey;
+}
+
+.top-header{
+  width: 100%;
 
   @media (min-width: @tablet-width){
-    position: relative;
+    width: 668px;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width){
+    width: 1050px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
 }
@@ -17,112 +32,248 @@
 // Navigation
 .main-nav{
   width: 100%;
-
   @media (min-width: @tablet-width){
     width: max-content;
     order: 2;
   }
-  background-color: yellow;
+
+  @media (min-width: @desktop-width){
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 40%;
+    order: 0;
+  }
 }
 
 .main-nav__list{
-  width: max-content;
+  width: 320px;
   padding: 0;
   margin: 0 auto;
   text-align: center;
+
   @media (min-width: @tablet-width){
+    width: max-content;
     display: flex;
     flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width){
+    margin: 0;
+    align-items: center;
     width: max-content;
+    height: 89px;
   }
 }
 
 .main-nav__item{
+  width: max-content;
+  margin: 0;
+  margin-top: 1px;
+  margin-left: 76px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   height: 79px;
   .opensans-bold;
   font-size: 17px;
   line-height: 24px;
   color: @black;
-// временное подчеркивание
-  border-bottom: 2px solid grey;
 
   @media (min-width: @tablet-width){
+    margin-left: 2px;
+    margin-top: 20px;
+    height: auto;
     font-size: 15px;
-    border-bottom: none;
+  }
+
+  @media (min-width: @desktop-width){
+    width: max-content;
+    margin: 0;
+    margin-top: 2px;
+    padding: 0;
+    height: max-content;
+    font-size: 17px;
+  }
+}
+
+.main-nav__item:nth-child(1){
+  @media (min-width: @tablet-width){
+    margin-right: 34px;
+  }
+
+  @media (min-width: @desktop-width){
+    margin-right: 72px;
+  }
+}
+
+.main-nav__link{
+  width: max-content;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width){
+    margin: 0;
   }
 }
 
 // Поиск + корзина
 .user-shopping{
   width: 100%;
+  margin: 0 auto;
+  padding: 0;
   .opensans-bold;
   font-size: 17px;
   line-height: 24px;
   color: @black;
 
   @media (min-width: @tablet-width){
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: max-content;
+    width: 70%;
+    height: 89px;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
     border-bottom: none;
-    justify-self: flex-end;
+  }
+
+  @media (min-width: @desktop-width){
+    margin-left: auto;
+    width: 40%;
+    order: 2;
   }
 }
 
 .user-shopping__list{
-  width: max-content;
+  width: 320px;
+  padding: 0;
   margin: 0 auto;
+  text-align: center;
+
   @media (min-width: @tablet-width){
+    width: max-content;
+    margin: 0;
+    margin-left: auto;
     display: flex;
     flex-direction: row;
-    width: max-content;
+  }
+
+  @media (min-width: @desktop-width){
+    margin: 0;
+    margin-right: 2px;
   }
 }
 
 .user-shopping__item{
-  margin-left: 25px;
+  width: max-content;
+  height: 79px;
+  margin: 0;
+  margin-top: -1px;
+  margin-left: 76px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 79px;
-  // временное подчеркивание
-  border-bottom: 2px solid grey;
 
   @media (min-width: @tablet-width){
     margin: 0;
-    padding: 0;
-    border-bottom: none;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+// Поиск по сайту
+.search__text{
+  height: max-content;
+  margin: 0;
+  padding: 0;
+  @media (min-width: @tablet-width){
+    display: none;
+  }
+}
+
+.search__img{
+  display: none;
+  width: 18px;
+  height: 18px;
+  @media (min-width: @tablet-width){
+    display: block;
+    background-image: url(../../img/header/search.svg);
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    margin-right: 64px;
+  }
+}
+
+// Корзина
+.basket__img{
+  display: none;
+  width: 21px;
+  height: 18px;
+   @media (min-width: @tablet-width){
+    display: block;
+    background-image: url(../../img/header/basket.svg);
+    background-repeat: no-repeat;
+    background-size: 21px 18px;
+
+    margin-right: 30px;
   }
 }
 
 // Навигация распродажа
 .page-nav{
   display: none;
+
   @media (min-width: @tablet-width){
     display: none;
   }
+
+  @media (min-width: @desktop-width){
+    .opensans-bold;
+    font-size: 15px;
+    line-height: 24px;
+    color: @black;
+
+    display: block;
+    order: 3;
+  }
+}
+
+.page-nav__list{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (min-width: @desktop-width){
+    margin-top: 19px;
+  }
+}
+
+.page-nav__item:first-child{
+  margin-right: 62px;
 }
 
 // Text delievery
 .delivery-info{
+  display: none;
   .opensans-400;
   font-size: 15px;
   line-height: 24px;
-  display: flex;
-  align-items: center;
-  text-align: right;
   color: @grey;
-  display: none;
+
   @media (min-width: @tablet-width){
-    position: absolute;
-    top: 85px;
-    right: 50px;
+    order: 3;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: auto;
+    padding: 0;
     display: block;
-    order: 4;
+    width: max-content;
   }
 }
 
@@ -131,46 +282,88 @@
   width: 100%;
   height: auto;
   margin: 0;
-  padding: 0 30px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
 
-  background-color: @lightgrey;
-}
+  background-color: grey;
 
-.content-heading__text{
-  margin: 73px auto;
-  width: max-content;
-  text-align: center;
-  background-color: lime;
-}
-
-// Button-toggle mobile
-.logo-block{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-
-  @media (min-width: @tablet-width){
-    width: max-content;
-    margin-right: auto;
+  @media (max-width: 767px){
+    font-size: 27px;
   }
 }
 
-.button-burger__toggle{
+.content-heading__text{
+  margin: 0 auto;
+  margin-top: 72px;
+  margin-bottom: 122px;
+  width: max-content;
+  text-align: center;
+
+  background-color: lime;
   @media (min-width: @tablet-width){
-    display: none;
+    margin: 0;
+    margin-top: 111px;
+    margin-bottom: 370px;
+    width: 500px;
+  }
+}
+
+.content-heading__break{
+  display: none;
+
+  @media (min-width: @mobile-width) and (max-width: 767px){
+    display: block;
   }
 }
 
 // Logotype
+.logo-block{
+  width: 100%;
+  height: 79px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width){
+    width: 30%;
+    display: block;
+    height: 89px;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width){
+    width: 20%;
+    margin: 0 auto;
+    order: 1;
+  }
+}
+
+.logo__wrapper{
+  width: 60%;
+  margin-left: auto;
+  height: 35px;
+
+  @media (min-width: @tablet-width){
+    width: max-content;
+    height: 89px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-display: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: @desktop-width){
+    margin: 0 auto;
+  }
+}
+
 .logo{
-  z-index: 1;
   width: 86px;
   height: 35px;
   margin: 0 auto;
@@ -178,11 +371,51 @@
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width){
+    margin: 0;
     width: 113px;
     height: 46px;
     background-image: url(../../img/header/mishka-logo-tablet.svg);
-    justify-self: flex-start;
-    align-self: center;
+  }
+
+  @media (min-width: @desktop-width){
+    margin: 0;
+    width: 149px;
+    height: 72px;
+    background-image: url(../../img/header/mishka-logo-desktop.svg);
+  }
+}
+// Button-toggle mobile
+
+.button-block{
+  width: 20%;
+  height: 20px;
+  margin-top: -2px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  @media (min-width: @tablet-width){
+    display: none;
+  }
+}
+
+.button-burger__toggle{
+  display: block;
+  width: 21px;
+  height: 20px;
+  margin: 0;
+  margin-right: 30px;
+
+  background-image: url(../../img/header/menu-close.svg);
+  background-repeat: no-repeat;
+  background-size: 21px 20px;
+  background-color: transparent;
+
+  border: none;
+
+  @media (min-width: @tablet-width){
+    display: none;
   }
 }
 

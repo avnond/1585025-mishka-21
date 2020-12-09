@@ -7,6 +7,7 @@
   width: 260px;
   margin: 0 auto;
   padding: 0;
+  background-color: blue;
 }
 
 // Fieldsets
@@ -58,7 +59,7 @@
 .form-type__input:checked + .form-type__radio-box::after{
   content: "";
   position: absolute;
-  left: -48px;
+  left: -46px;
   top: 9px;
   width: 11px;
   height: 11px;
@@ -186,6 +187,10 @@
   background-color: purple;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
 }
 
 .form-wishes__area{
@@ -199,7 +204,6 @@
   padding-left: 16px;
   padding-top: 16px;
   box-sizing: border-box;
-  vertical-align: top;
   resize: none;
   border: 2px solid @grey;
 }
@@ -235,8 +239,6 @@
   font-size: 14px;
   line-height: 16px;
   color: @grey;
-
-  background-color: orange;
 }
 
 // Button
