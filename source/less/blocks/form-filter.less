@@ -477,7 +477,6 @@
 }
 
 .form-tel__legend{
-  margin-bottom: 5px;
   margin: 0;
   padding: 0;
 
@@ -518,15 +517,16 @@
   }
 
   @media (min-width: @desktop-width){
+    margin: 0 auto;
     grid-template-columns: 10% 90%;
   }
 }
 
 .form-email__legend{
-  margin-bottom: 5px;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @tablet-width){
-    margin: 0;
     margin-top: 6px;
   }
 
@@ -550,9 +550,12 @@
 }
 
 .form-email__input{
+  margin: 0;
   margin-top: 15px;
+  padding: 0;
 
   @media (min-width: @tablet-width){
+    position: relative;
     margin: 0;
     margin-top: 0px;
     margin-left: 52px;
