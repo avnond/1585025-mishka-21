@@ -12,53 +12,56 @@
 
 // Grey Buttons
 .site-button{
+  height: 52px;
   background: none;
   border: 2px solid @grey;
   border-radius: none;
-  padding: 16px 70px;
 
   .opensans-bold;
   font-size: 18px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
   text-align: center;
   text-transform: uppercase;
   color: @grey;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-// Headings
+// Заголовки на странице index
 .site-heading{
   .opensans-bold;
   font-size: 25px;
   line-height: 30px;
-  display: flex;
-  align-items: center;
   color: @black;
-}
 
-// Заголовки каждой страницы
-.big-heading{
-  .opensans-bold;
-  font-size: 27px;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  @media (min-width: @tablet-width){
+    font-size: 43px;
+    line-height: 50px;
+  }
 
-  color: #000000;
+  @media (min-width: @desktop-width){
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 // Form contacts-input font
 .contacts-input{
+  margin: 0;
+  padding: 0;
   .opensans-400;
   font-size: 17px;
   line-height: 18px;
   color: @black;
   border: none;
-  border-bottom: 2px solid @grey;
   position: relative;
-  padding-bottom: 17px;
+
+  @media (min-width: @tablet-width){
+    font-size: 19px;
+  }
 }
 
 .contacts-input::placeholder {
