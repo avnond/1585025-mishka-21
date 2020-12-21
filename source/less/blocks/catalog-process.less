@@ -1,14 +1,44 @@
+// Process block
 .process{
   border: 1px solid @special-lightgrey;
 }
 
 .process__heading{
+  margin: 0;
+  margin-top: 22px;
+  margin-left: 55px;
+
+  position: relative;
+  padding: 0 34px;
+  box-sizing: border-box;
   .opensans-bold;
   font-size: 17px;
   line-height: 24px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   color: #000000;
+}
+
+.process__heading::after{
+  content: "";
+  position: absolute;
+  left: -24px;
+  width: 32px;
+  height: 22px;
+  background-image: url(../../img/catalog-process/video-icon.svg);
+}
+
+.process__video{
+  margin: 0;
+  margin-top: 26px;
+}
+
+.process__text-block{
+  margin-top: 31px;
+  padding: 0 32px;
+  box-sizing: border-box;
+  background-color: #fff;
 }
 
 .process__description{
@@ -18,5 +48,11 @@
   display: flex;
   align-items: center;
   color: #444444;
+}
 
+.process__button{
+  width: 192px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 33px;
 }

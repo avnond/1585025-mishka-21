@@ -8,71 +8,89 @@
   </head>
   <body class="form-page__body">
     <header class="page-header">
-      <h1 class="visually-hidden">Онлайн-магазин «Мишка»</h1>
 
-      <div class="logo-block">
-        <div class="logo">
-          <a class="logo__link site-link" href="index.html"></a>
+      <div class="top-header">
+        <h1 class="visually-hidden">Онлайн-магазин «Мишка»</h1>
+
+        <div class="logo-block">
+
+          <div class="logo__wrapper--mobile">
+            <a class="logo__link site-link" href="index.html">
+              <img src="img/header/mishka-logo-mobile.svg" alt="Магазин Мишка">
+            </a>
+          </div>
+
+          <div class="logo__wrapper--tablet">
+            <a class="logo__link site-link" href="index.html">
+              <img src="img/header/mishka-logo-tablet.svg" alt="Магазин Мишка">
+            </a>
+          </div>
+
+          <div class="logo__wrapper--desktop">
+            <a class="logo__link site-link" href="index.html">
+              <img src="img/header/mishka-logo-desktop.svg" alt="Магазин Мишка">
+            </a>
+          </div>
+
+          <div class="button-block">
+            <button class="button-burger__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+           </button>
+          </div>
         </div>
 
-        <button class="button-burger__toggle" type="button">X
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-      </div>
-
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
+        <nav class="main-nav">
           <ul class="main-nav__list site-list">
-            <li class="main-nav__item">
-              <a class="site-link" href="catalog.html">
+            <li class="main-nav__item border-bottom-item">
+              <a class="main-nav__link site-link" href="catalog.html">
                 Каталог товаров
               </a>
             </li>
 
-            <li class="main-nav__item">
-              <a class="site-link" href="#">
+            <li class="main-nav__item border-bottom-item">
+              <a class="main-nav__link site-link" href="form.html">
                 Вязание на заказ
               </a>
             </li>
           </ul>
+        </nav>
+
+        <div class="user-shopping">
+          <ul class="user-shopping__list site-list">
+            <li class="user-shopping__item search  border-bottom-item">
+              <a class="search__link user-shopping__link site-link" href="#">
+                <span class="search__text">Поиск по сайту</span>
+                <span class="search__img"></span>
+              </a>
+            </li>
+
+            <li class="user-shopping__item basket border-bottom-item">
+              <span class="basket__img"></span>
+              <a class="basket__link user-shopping__link site-link" href="#">
+                Корзина: пока пуста
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
 
-      <div class="user-shopping">
-        <ul class="user-shopping__list site-list">
-          <li class="user-shopping__item search">
-            <a class="search__link site-link" href="#">
-              <span class="search__text">Поиск по сайту</span>
-              <span class="search__img"></span>
-            </a>
-          </li>
+        <div class="page-nav">
+          <ul class="page-nav__list site-list">
+            <li class="page-nav__item">
+              <a class="site-link"href="">Новые поступления</a>
+            </li>
+            <li class="page-nav__item">
+              <a class="site-link" href="">Распродажа</a>
+            </li>
+          </ul>
+        </div>
 
-          <li class="user-shopping__item basket">
-            <span class="basket__img"></span>
-            <a class="basket__link site-link" href="#">
-              Корзина: пока пуста
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="page-nav">
-        <ul class="page-nav__list site-list">
-          <li class="page-nav__item">
-            <a class="site-link"href="">Новые поступления</a>
-          </li>
-          <li class="page-nav__item">
-            <a class="site-link" href="">Распродажа</a>
-          </li>
-        </ul>
-      </div>
-
-      <p class="delivery-info">
-        Бесплатная доставка по России
-      </p>
+        <p class="delivery-info">
+          Бесплатная доставка по России
+        </p>
+     </div>
 
       <h2 class="content-heading site-heading">
-        <span class="form-content-heading__text content-heading__text">
+        <span class="content-heading__text">
           Вязание на заказ
         </span>
       </h2>
@@ -80,13 +98,15 @@
 
     <main class="form-main">
       <div class="form-main__wrapper">
-        <p class="form-main__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+
+        <p class="form-main__description">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
         </p>
 
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
 
           <fieldset class="filter__form-type form-type filter-fieldset">
-            <legend class="form-type__legend legends">Тип</legend>
+            <h3 class="form-type__legend legends">Тип</h3>
             <ul class="form-type__list site-list">
               <li class="form-type__item">
                 <label for="filter-type-accessory">
@@ -97,94 +117,125 @@
               </li>
               <li class="form-type__item">
                 <label for="filter-type-toy">
-                  <input class="form-type__input visually-hidden " type="radio" name="type" value="toy" id="filter-type-toy">
-                  <span class="form-type__radio-box-2 form-type__radio-box"></span>
+                  <input class="form-type__input visually-hidden" type="radio" name="type" value="toy" id="filter-type-toy">
+                  <span class="form-type__radio-box"></span>
                   Детская игрушка
                 </label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="filter__form-color form-color filter-fieldset">
-            <legend class="form-color__legend legends">Цвет</legend>
+          <div class="fieldset-wrapper--other-color">
+            <fieldset class="filter__form-color form-color filter-fieldset">
+              <h3 class="form-color__legend legends">Цвет</h3>
 
-            <label class="form-color__item">
-              <input class="form-color__input visually-hidden" type="checkbox" name="color" value="white" id="filter-color-white" checked>
-              <span class="form-color__check-box"></span>
-              Белый
-            </label>
+              <ul class="form-color__list site-list">
+                <li class="form-color__item">
+                  <label class="form-color__label">
+                    <input class="form-color__input visually-hidden" type="checkbox" name="color" value="white" id="filter-color-white" checked>
+                    <span class="form-color__check-box"></span>
+                    Белый
+                  </label>
+                </li>
 
-            <label class="form-color__item">
-              <input class="form-color__input visually-hidden" type="checkbox" name="color" value="grey" id="filter-type-grey" checked>
-              <span class="form-color__check-box"></span>
-              Серый
-            </label>
+                <li class="form-color__item">
+                  <label class="form-color__label">
+                    <input class="form-color__input visually-hidden" type="checkbox" name="color" value="grey" id="filter-type-grey" checked>
+                    <span class="form-color__check-box"></span>
+                    Серый
+                  </label>
+                </li>
 
-            <label class="form-color__item">
-              <input class="form-color__input visually-hidden" type="checkbox" name="color" value="tiffany" id="filter-color-tiffany">
-              <span class="form-color__check-box"></span>
-              «Тиффани»
-            </label>
+                <li class="form-color__item">
+                  <label class="form-color__label">
+                    <input class="form-color__input visually-hidden" type="checkbox" name="color" value="tiffany" id="filter-color-tiffany">
+                    <span class="form-color__check-box"></span>
+                    «Тиффани»
+                  </label>
+                </li>
 
-            <label class="form-color__item">
-              <input class="form-color__input visually-hidden" type="checkbox" name="color" value="black" id="filter-type-black">
-              <span class="form-color__check-box"></span>
-              Черный
-            </label>
+                <li class="form-color__item">
+                  <label class="form-color__label">
+                    <input class="form-color__input visually-hidden" type="checkbox" name="color" value="black" id="filter-type-black">
+                    <span class="form-color__check-box"></span>
+                    Черный
+                  </label>
+                </li>
 
-            <label class="form-color__item">
-              <input class="form-color__input visually-hidden" type="checkbox" name="color" value="pink" id="filter-type-pink">
-              <span class="form-color__check-box"></span>
-              Розовый
-            </label>
+                <li class="form-color__item">
+                  <label class="form-color__label">
+                    <input class="form-color__input visually-hidden" type="checkbox" name="color" value="pink" id="filter-type-pink">
+                    <span class="form-color__check-box"></span>
+                    Розовый
+                  </label>
+                </li>
 
-            <label class="form-color__item">
-              <input class="form-color__input visually-hidden" type="checkbox" name="color" value="orange" id="filter-type-orange">
-              <span class="form-color__check-box"></span>
-              Оранжевый
-            </label>
-          </fieldset>
+                <li class="form-color__item">
+                  <label class="form-color__label">
+                    <input class="form-color__input visually-hidden" type="checkbox" name="color" value="orange" id="filter-type-orange">
+                    <span class="form-color__check-box"></span>
+                    Оранжевый
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
           <fieldset class="filter__form-name form-name filter-fieldset">
-            <legend class="form-name__legend legends">ФИО</legend>
-            <div>
-              <label class="form-name__label" for="user-name">Имя:</label>
-              <input class="form-name__input contacts-input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
-            </div>
-            <div>
-              <label class="form-name__label" for="user-lastname">Фамилия:</label>
-              <input class="form-name__input contacts-input" type="text" name="user-lastname" id="user-lastname" placeholder="Укажите фамилию*" required>
-            </div>
-            <div>
-              <label class="form-name__label" for="user-middlename">Отчество:</label>
-              <input class="form-name__input contacts-input" type="text" name="user-middlename" id="user-middlename" placeholder="Отчество, если желаете">
-            </div>
+            <h3 class="form-name__legend legends">ФИО</h3>
+
+            <ul class="form-name__list site-list">
+              <li class="form-name__item">
+                <label class="form-name__label label-first" for="user-name">Имя:</label>
+                <input class="form-name__input contacts-input" type="text" name="user-name" id="user-name" placeholder="Введите ваше имя*" required>
+              </li>
+
+              <li class="form-name__item">
+                <label class="form-name__label" for="user-lastname">Фамилия:</label>
+                <input class="form-name__input contacts-input" type="text" name="user-lastname" id="user-lastname" placeholder="Укажите фамилию*" required>
+              </li>
+
+              <li class="form-name__item">
+                <label class="form-name__label" for="user-middlename">Отчество:</label>
+                <input class="form-name__input contacts-input" type="text" name="user-middlename" id="user-middlename" placeholder="Отчество, если желаете">
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset class="filter__form-tel form-tel filter-fieldset">
-            <legend class="form-tel__legend legends">Тел</legend>
-            <input class="form-tel__input contacts-input" type="tel" name="user-tel" placeholder="+7 XXX XXX XX XX*" required>
-          </fieldset>
+          <!-- Телефон и email -->
+          <div class="fieldset-wrapper--other-color tel-email--other-color">
+            <fieldset class="filter__form-tel form-tel filter-fieldset">
+              <h3 class="form-tel__legend legends">Тел</h3>
+              <input class="form-tel__input contacts-input" type="tel" name="user-tel" placeholder="+7 XXX XXX XX XX*" required>
+            </fieldset>
 
-          <fieldset class="filter__form-email form-email filter-fieldset">
-            <legend class="form-email__legend legends">E-mail</legend>
-            <input class="form-email__input contacts-input" type="email" name="user-email" placeholder="Ваш Email*" required>
-          </fieldset>
+            <fieldset class="filter__form-email form-email filter-fieldset">
+              <h3 class="form-email__legend legends">E-mail</h3>
+              <input class="form-email__input contacts-input" type="email" name="user-email" placeholder="Ваш Email*" required>
+            </fieldset>
+          </div>
 
           <fieldset class="filter__form-wishes form-wishes filter-fieldset">
-            <legend class="form-wishes__legend legends">Доп</legend>
+            <h3 class="form-wishes__legend legends">Доп</h3>
             <textarea class="form-wishes__area contacts-input" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea></p>
           </fieldset>
 
-          <p class="filter__hint">*Поля обязательны для заполнения</p>
-          <button class="filter__button-post site-button" type="submit">Отправить заказ</button>
+          <div class="form-bottom-info">
+            <p class="filter__hint">*Поля обязательны для заполнения</p>
+            <button class="filter__button-post" type="submit">Отправить заказ</button>
+          </div>
         </form>
       </div>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="logo site-link" href="#"></a>
+
+        <div class="logo-footer__wrapper">
+          <a class="logo__link site-link" href="#">
+            <img src="img/footer/logo-footer.svg" alt="Магазин Мишка">
+          </a>
+        </div>
 
         <ul class="social__social-list site-list">
           <li class="social__social-item">

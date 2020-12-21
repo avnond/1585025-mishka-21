@@ -7,6 +7,18 @@
   width: 260px;
   margin: 0 auto;
   margin-top: 17px;
-  margin-bottom: 29px;
-  background-color: limegreen;
+  margin-bottom: 22px;
+
+
+  @media (min-width: @tablet-width){
+    margin-bottom: 29px;
+    width: 668px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width){
+    margin-top: 120px;
+    width: 702px;
+  }
 }
