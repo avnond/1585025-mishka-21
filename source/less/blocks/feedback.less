@@ -1,6 +1,43 @@
 .feedback{
   width: 100%;
-  margin-bottom: 130px;
+  margin-bottom: 88px;
+  position: relative;
+
+  @media (min-width: @tablet-width){
+    margin-bottom: 130px;
+    background-image: url(../img/feedback/feedback-bg.png);
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @desktop-width){
+    background: none;
+    margin-bottom: 134px;
+  }
+}
+
+.feedback::after{
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -50px;
+  width: 100%;
+  height: 6px;
+  background-color: transparent;
+  background-image: url(../../img/hit-product/zigzag-line-desktop.svg);
+  background-repeat: repeat;
+  background-size: contain;
+
+  @media (min-width: @tablet-width){
+    left: 0px;
+    bottom: -82px;
+    width: 100%;
+    height: 17px;
+  }
+
+  @media (min-width: @desktop-width){
+    height: 23px;
+    bottom: -88px;
+  }
 }
 
 .feedback__wrapper{
@@ -23,6 +60,9 @@
     margin: 0 auto;
     width: 1050px;
     padding: 0 50px;
+    background-image: url(../img/feedback/feedback-bg.png);
+    background-repeat: no-repeat;
+    background-position: 50px 0;
   }
 }
 
@@ -41,27 +81,10 @@
   }
 }
 
-// .feedback__comment{
-//   .opensans-400;
-//   font-size: 15px;
-//   line-height: 30px;
-//   align-items: center;
-//   color: @grey;
-//   margin: 0;
-//   padding: 0;
-
-//   @media (min-width: @tablet-width){
-//     font-size: 17px;
-//   }
-
-//   background-color: orange;
-// }
-
 .feedback__comment-text{
   .opensans-400;
   font-size: 15px;
   line-height: 30px;
-  align-items: center;
   color: @grey;
 
   margin: 0;
@@ -86,7 +109,7 @@
 .feedback__user-info{
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width){
     order: 2;
@@ -97,11 +120,17 @@
     margin-bottom: 96px;
     margin-left: 174px;
   }
+}
 
+.feedback__brake{
+  @media (min-width: @tablet-width){
+    display: none;
+  }
 }
 
 .feedback__user-name{
   margin: 0;
+  margin-bottom: 5px;
   padding: 0;
   .opensans-bold;
   font-size: 17px;
@@ -124,12 +153,11 @@
   margin: 0;
   padding: 0;
   .opensans-400;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 30px;
   align-items: center;
   color: @grey;
   @media (min-width: @tablet-width){
-    font-size: 17px;
     width: max-content;
   }
 }
@@ -141,6 +169,7 @@
   margin-bottom: 38px;
 
   @media (min-width: @tablet-width){
+    width: 170px;
     order: 2;
     margin: 0;
   }
@@ -166,7 +195,7 @@
   background-image: url(../img/feedback/feedback-arrow.svg);
   background-repeat: no-repeat;
   background-color: transparent;
-  background-position: 50% 50%;
+  background-position: 50% 11px;
   transform: rotate(180deg);
 }
 
@@ -174,7 +203,7 @@
   background-image: url(../img/feedback/feedback-arrow.svg);
   background-repeat: no-repeat;
   background-color: transparent;
-  background-position: 50% 50%;
+  background-position: 50% 12px;
 }
 
 // Кнопка "Написать"
@@ -182,6 +211,8 @@
   width: 260px;
   margin-bottom: 89px;
   @media (min-width: @tablet-width){
+    font-size: 17px;
+    line-height: 20px;
     width: 175px;
     margin: 0;
     margin-top: 79px;

@@ -2,23 +2,31 @@
   width: 100%;
   margin: 0;
   margin-bottom: 58px;
-  background-color: blue;
 
   @media (min-width: @tablet-width) {
     margin-top: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-top: 110px;
   }
 }
 
 .catalog-main__wrapper{
   width: 260px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 28px;
   padding: 0 30px;
-  background-color: pink;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width){
     width: 668px;
     padding: 0 50px;
+    margin-top: 78px;
+  }
+
+  @media (min-width: @desktop-width){
+    width: 1050px;
   }
 }
 
@@ -27,8 +35,21 @@
   margin: 0 auto;
 }
 
+.product__list{
+  margin: 0;
+  @media (min-width: @desktop-width){
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+  }
+}
+
 .product__item{
   margin: 0;
+  height: min-content;
   margin-bottom: 29px;
   padding: 0;
   display: flex;
@@ -37,29 +58,94 @@
   align-items: center;
   border: 1px solid @special-lightgrey;
 
+  &:nth-child(1){
+    @media (min-width: @tablet-width) {
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:nth-child(2){
+    margin-bottom: 28px;
+    @media (min-width: @tablet-width) {
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:nth-child(3){
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: @desktop-width){
+    margin: 0;
+    flex-direction: column;
   }
 }
+
+.product__item picture{
+  margin: 0;
+  height: auto;
+  padding: 0;
+}
+
 .product__image{
   margin: 0;
-  @media (min-width: @tablet-width) {
-  }
 }
 
 .product__info{
   margin: 0;
   width: 100%;
-  background-color: darkred;
   padding: 0px 25px 26px 26px;
   box-sizing: border-box;
+  @media (min-width: @tablet-width) {
+    padding: 0px 30px 26px 32px;
+    height: 334px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 30px 25px 28px;
+    height: 192px;
+  }
 }
 
 .product__description{
   margin: 0;
-  margin-top: 28px;
-  background-color: yellow;
+  margin-top: 25px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 22px;
+  }
+}
+
+.product__item:nth-child(3) .product__description{
+  margin-top: 20px;
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+  }
 }
 
 .product__name{
@@ -71,10 +157,17 @@
   flex-direction: column;
   justify-content: flex-start;
   color: @black;
-  background-color: #fff;
   padding: 0;
   padding-right: 10px;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width){
+    width: 250px;
+    font-size: 20px;
+  }
+}
+.product__item:nth-child(3) .product__name{
+  margin-bottom: 10px;
 }
 
 .product__specifications{
@@ -86,17 +179,24 @@
   display: flex;
   align-items: center;
   color: @grey;
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+  }
 }
 
 .product__cost{
   margin: 0;
   margin-top: 41px;
   height: max-content;
-  background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    align-items: flex-end;
+  }
 }
 
 .product__cost-value{
@@ -104,8 +204,10 @@
   .opensans-bold;
   font-size: 15px;
   line-height: 24px;
-  color: #000000;
-  background-color: red;
+  color: @black;
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 //  Button
@@ -117,4 +219,8 @@
   background-repeat: no-repeat;
   background-color: transparent;
   border: none;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 5px;
+    margin-right: 2px;
+  }
 }

@@ -1,4 +1,5 @@
 .hit-product{
+  position: relative;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -6,6 +7,34 @@
 
   @media (min-width: @tablet-width){
     margin-bottom: 125px;
+  }
+
+  @media (min-width: @desktop-width){
+    margin-bottom: 162px;
+  }
+}
+
+.hit-product::before{
+  display: none;
+
+  @media (min-width: @tablet-width){
+    display: block;
+    z-index: 2;
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -68px;
+    width: 100%;
+    height: 17px;
+    background-image: url(../img/hit-product/zigzag-line-desktop.svg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width){
+    height: 23px;
+    bottom: -96px;
   }
 }
 
@@ -64,8 +93,8 @@
     flex-direction: row;
     align-items: center;
     margin: 0;
-    margin-left: 32px;
-    margin-bottom: 35px;
+    margin-left: 48px;
+    margin-bottom: 36px;
   }
 }
 
@@ -78,11 +107,15 @@
     margin-bottom: 0;
     padding: 0;
   }
+
+  @media (min-width: @desktop-width){
+    order: 2;
+  }
 }
 
 .hit-product__small-heading{
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   padding: 0;
   .opensans-bold;
   font-size: 17px;
@@ -100,7 +133,7 @@
   }
 
   @media (min-width: @desktop-width){
-    margin-right: 43px;
+    margin-right: 56px;
   }
 }
 
@@ -111,41 +144,41 @@
   line-height: 24px;
   color: @grey;
 
+  margin-bottom: 16px;
+
   @media (min-width: @tablet-width){
     font-size: 17px;
     line-height: 30px;
     margin: 0;
     margin-bottom: 36px;
+    order: -3;
   }
 
   @media (min-width: @desktop-width){
     margin: 0;
-    margin-bottom: 68px;
+    margin-bottom: 50px;
   }
 }
 
 // Table
 .hit-product__specifications{
   width: max-content;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   .opensans-400;
   font-size: 15px;
   line-height: 20px;
   color: @grey;
 
   @media (min-width: @tablet-width){
+    order: -3;
     margin: 0;
     margin-bottom: 60px;
   }
 
   @media (min-width: @desktop-width){
-    margin-bottom: 110px;
+    margin: 0;
+    margin-bottom: 112px;
   }
-  background-color: #fff;
-}
-
-.hit-product__specifications{
-  line-height: 20px;
 }
 
 .table-specifications__first-col{
@@ -153,7 +186,7 @@
   padding: 0;
   position: relative;
   height: 36px;
-  width: 97px;
+  width: 94px;
 
   @media (min-width: @tablet-width){
     width: 94px;
@@ -182,7 +215,7 @@
 // Блок "Цена"
 .hit-product__cost{
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   width: max-content;
   .opensans-bold;
   font-size: 17px;
@@ -196,7 +229,7 @@
     width: max-content;
     font-size: 20px;
     line-height: 24px;
-
+    order: -2;
     margin-bottom: 10px;
     margin-left: 72px;
   }
@@ -210,22 +243,18 @@
 
 // Блок "Изображение"
 .hit-product__image{
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   @media (min-width: @tablet-width){
-    align-self: flex-end;
     margin: 0;
-    margin-top: auto;
-    width: 334px;
-    height: 404px;
-    order: 3;
+    padding: 0;
+    margin-top: 12px;
+    margin-left: 42px;
   }
 
   @media (min-width: @desktop-width){
     position: absolute;
-    top: -153px;
-    margin: 0;
-    margin-top: auto;
-    margin-left: auto;
+    top: -165px;
+    right: 0;
     width: 525px;
     height: 636px;
     order: 3;
@@ -236,7 +265,6 @@
 // Кнопка "Заказать"
 .hit-product__button-buy{
   width: 260px;
-  padding: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,5 +276,6 @@
     height: 52px;
     margin: 0;
     margin-top: auto;
+    order: -2;
   }
 }
