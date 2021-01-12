@@ -66,8 +66,7 @@
   }
 
   @media (min-width: @desktop-width){
-    margin-right: 0;
-    margin-left: 0px;
+    margin: 0;
   }
 }
 
@@ -77,6 +76,11 @@
   background-image: url(../img/footer/instagram-icon.svg);
   background-repeat: no-repeat;
   background-position: center center;
+
+  @media (min-width: @desktop-width){
+    margin: 0;
+    margin-bottom: 2px;
+  }
 
   &:nth-child(2){
     background-image: url(../img/footer/facebook-icon.svg);
@@ -112,8 +116,10 @@
   .opensans-bold;
   font-size: 19px;
   line-height: 18px;
-  display: flex;
-  align-items: center;
   color: @black;
   margin-right: 27px;
+  @media (min-width: @tablet-width){
+    margin-top: 5px;
+    align-self: flex-start;
+  }
 }

@@ -2,8 +2,54 @@
 .category-wrapper{
   width: 100%;
 
+  @media (min-width: @tablet-width){
+    z-index: 2;
+    margin-top: -120px;
+    position: relative;
+  }
+
   @media (min-width: @desktop-width){
-    margin-bottom: 115px;
+    margin-top: -122px;
+    margin-bottom: 132px;
+  }
+}
+
+.category-wrapper::before{
+  display: none;
+  @media (min-width: @tablet-width){
+    display: block;
+    z-index: 2;
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -12px;
+    width: 100%;
+    height: 24px;
+    background-image: url(../img/categories/zigzag-fill-tablet.svg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-color: transparent;
+  }
+  @media (min-width: @desktop-width){
+    display: none;
+  }
+}
+
+.category-wrapper::after{
+  display: none;
+  @media (min-width: @desktop-width){
+    display: block;
+    z-index: 2;
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+    width: 100%;
+    height: 38px;
+    background-image: url(../img/categories/zigzag-fill-desktop.svg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-color: transparent;
   }
 }
 
@@ -21,11 +67,22 @@
     flex-direction: row;
     margin-bottom: 52px;
   }
+
+  @media (min-width: @desktop-width){
+    width: 1050px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 52px;
+  }
 }
 
 .category__item{
-  display: block;
-  padding: 24px 0 31px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 24px 27px 31px 30px;
   width: 100%;
   height: 103px;
   .opensans-bold;
@@ -38,11 +95,40 @@
   @media (min-width: @tablet-width){
     font-size: 20px;
     line-height: 30px;
-    padding: 27px 0 31px 36px;
+    padding: 27px 30px 28px 36px;
     height: 119px;
   }
 }
 
 .category__item:nth-child(2){
   background-color: @bg-kids-toys;
+}
+
+
+.category__icon{
+  display: block;
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+}
+
+.icon-lamp{
+  background-size: 40px 62px;
+  background-position: 12px -2px;
+  background-image: url(../../img/categories/lamp.svg);
+
+  @media (min-width: @tablet-width){
+    background-position: 18px 4px;
+  }
+}
+
+.icon-toy{
+  background-size: 60px 60px;
+  background-position: 0 -4px;
+  background-image: url(../../img/categories/toy.svg);
+
+  @media (min-width: @tablet-width){
+    background-size: 62px 60px;
+    background-position: 0 4px;
+  }
 }
