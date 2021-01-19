@@ -164,6 +164,29 @@
     line-height: 30px;
   }
 }
+.contacts__email-link{
+  &:hover{
+    color: @lightblue;
+  }
+  position: relative;
+}
+
+.contacts__email-link:active:after{
+  opacity: 0.1;
+}
+
+.contacts__email-link::after{
+  left: 0;
+  bottom: -2px;
+  position: absolute;
+  content: "";
+  width: 179px;
+  height: 1px;
+  background-color: @lightblue;
+  @media (min-width: @tablet-width){
+    width: 204px;
+  }
+}
 
 .contacts__adress-text{
   vertical-align: top;
@@ -219,6 +242,8 @@
   height: 52px;
   margin: 0 auto;
   padding: 16px 49px;
+  box-sizing: border-box;
+  text-decoration: none;
 
   @media (min-width: @tablet-width){
     .opensans-bold;

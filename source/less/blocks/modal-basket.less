@@ -1,11 +1,56 @@
 .modal-basket{
-  width: 100%;
-  height: 336px;
   position: absolute;
-  top: 1046px;
+  top: 0;
+  width: 100vw;
+  height: 4248px;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width){
+    height: 3710px;
+  }
+
+  @media (min-width: @desktop-width){
+    height: 3623px;
+  }
+}
+
+.modal-catalog{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 2560px;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width){
+    height: 2505px;
+  }
+
+  @media (min-width: @desktop-width){
+    height: 1890px;
+  }
+}
+
+.modal-basket__popup{
+  width: 320px;
+  margin: 0 auto;
   background: @white;
   border: 1px solid #C6C6C6;
   box-shadow: 0px 5px 10px rgba(0, 1, 1, 0.25);
+
+  @media (min-width: @tablet-width){
+    width: 566px;
+    height: 336px;
+  }
 }
 
 .modal-basket__wrapper{
@@ -122,6 +167,7 @@
 }
 
 .modal-basket__add-to-basket{
+  margin-bottom: 46px;
   width: 260px;
   padding: 20px 82px;
   background-color: @lightblue;

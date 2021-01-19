@@ -181,6 +181,14 @@
   border: 1px solid @special-lightgrey;
   background-color: @white;
 
+  &:hover{
+    opacity: 0.6;
+  }
+
+  &:active{
+    opacity: 0.1;
+  }
+
   @media (min-width: @tablet-width){
     border: none;
   }
@@ -190,12 +198,13 @@
   }
 }
 
+
 .feedback__switch-previous{
   border-left: none;
   background-image: url(../img/feedback/feedback-arrow.svg);
   background-repeat: no-repeat;
   background-color: transparent;
-  background-position: 50% 11px;
+  background-position: 50% 14px;
   transform: rotate(180deg);
 }
 
@@ -210,6 +219,7 @@
 .feedback__button-write{
   width: 260px;
   margin-bottom: 89px;
+  text-decoration: none;
   @media (min-width: @tablet-width){
     font-size: 17px;
     line-height: 20px;

@@ -42,13 +42,13 @@
   @media (min-width: @tablet-width){
     margin-top: 60px;
     padding-top: 20px;
-    padding-bottom: 60px;
+    padding-bottom: 49px;
   }
 
   @media (min-width: @desktop-width){
     margin-top: 30px;
     padding-top: 50px;
-    padding-bottom: 62px;
+    padding-bottom: 51px;
   }
 }
 
@@ -146,6 +146,17 @@
   display: none;
 }
 
+.form-type__item label:hover .form-type__radio-box,
+.form-color__item label:hover .form-color__check-box::before{
+  border: 2px solid @lightblue;
+}
+
+.form-type__item label:active .form-type__radio-box,
+.form-color__item label:active .form-color__check-box::before{
+  border: 2px solid @grey;
+  opacity: 0.3;
+}
+
 .form-type__radio-box{
   min-width: 36px;
   min-height: 36px;
@@ -155,7 +166,6 @@
   align-items: center;
   border-radius: 50%;
   border: 2px solid @black;
-
 
   @media (min-width: @tablet-width){
     margin-right: 28px;
@@ -411,6 +421,14 @@
   }
 }
 
+.form-name__item:hover .form-name__label::after,
+.form-name__item:hover .label-first::before,
+
+.form-name__item:active .form-name__label::after,
+.form-name__item:active .label-first::before{
+  background-color: @lightblue;
+}
+
 .form-name__label::after{
   display: block;
   content: "";
@@ -477,11 +495,12 @@
 
   @media (min-width: @tablet-width){
     margin-top: 30px;
-    margin-bottom: 52px;
   }
 
   @media (min-width: @desktop-width){
+    padding: 0;
     margin-top: 0;
+    margin-bottom: 0;
     grid-template-columns: 10% 90%;
   }
 }
@@ -501,7 +520,38 @@
   }
 }
 
-.filter__form-tel label::before{
+.form-tel__label,
+.form-email__label{
+  @media (min-width: @desktop-width){
+    width: max-content;
+  }
+}
+
+.form-tel__label{
+  @media (min-width: @tablet-width){
+    margin: 0;
+    margin-left: -18px;
+  }
+
+  @media (min-width: @desktop-width){
+    margin-top: -12px;
+  }
+}
+
+.form-email__label{
+  @media (min-width: @tablet-width){
+    margin: 0;
+    margin-top: -12px;
+    margin-left: -18px;
+  }
+}
+
+.form-email__label:hover .form-email__input,
+.form-tel__label:hover .form-tel__input{
+  border-bottom: 2px solid @lightblue;
+}
+
+.form-tel__label::before{
   content: "";
   position: absolute;
   right: 20px;
@@ -516,21 +566,26 @@
   }
 
   @media (min-width: @desktop-width){
-    right: 232px;
+    right: 184px;
   }
 }
 
 .form-tel__input{
   margin: 0;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 2px;
   background-color: transparent;
+  width: 260px;
+  height: 52px;
+  border-bottom: 2px solid @grey;
 
   @media (min-width: @tablet-width){
+    width: 501px;
     position: relative;
     margin: 0;
     margin-left: 50px;
-    margin-top: 10px;
+    padding-left: 18px;
+    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width){
@@ -539,12 +594,17 @@
   }
 }
 
+
 // E-mail
 .filter__form-email{
   position: relative;
-  margin-top: 38px;
+  margin-top: 22px;
+  @media (min-width: @tablet-width){
+    margin-top: 36px;
+  }
 
   @media (min-width: @desktop-width){
+    margin-top: 36px;
     grid-template-columns: 10% 90%;
   }
 }
@@ -597,15 +657,20 @@
 
 .form-email__input{
   margin: 0;
-  margin-top: 18px;
+  margin-top: 0px;
   padding: 0;
+  width: 260px;
+  height: 52px;
   background-color: transparent;
+  border-bottom: 2px solid @grey;
 
   @media (min-width: @tablet-width){
+    width: 501px;
     position: relative;
     margin: 0;
-    margin-top: 0px;
     margin-left: 52px;
+    padding-left: 18px;
+    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width){
@@ -614,44 +679,20 @@
   }
 }
 
-.filter__form-tel::after,
-.filter__form-email::after{
-  content: "";
-  position: absolute;
-  height: 2px;
-  background-color: @grey;
-
-  @media (min-width: @mobile-width){
-    bottom: -8px;
-    right: 12px;
-    width: 260px;
-    height: 2px;
-  }
-
-  @media (min-width: @tablet-width){
-    bottom: -16px;
-    right: 50px;
-    width: 501px;
-  }
-
-  @media (min-width: @desktop-width){
-    bottom: -16px;
-    right: 225px;
-    width: 700px;
-  }
-}
 
 // Text area
 .filter__form-wishes{
   height: auto;
   margin: 0 auto;
-  margin-top: 22px;
+  margin-top: 4px;
+  margin-bottom: 16px;
   padding: 0;
 
   @media (min-width: @tablet-width){
     display: flex;
     flex-direction: row;
     margin-top: 50px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width){
@@ -681,6 +722,15 @@
   box-sizing: border-box;
   resize: none;
   border: 2px solid @grey;
+
+  &:hover{
+    border: 2px solid @lightblue;
+  }
+
+  &:focus{
+    outline: none;
+    border: 2px solid @lightblue;
+  }
 
   @media (min-width: @tablet-width){
     margin-left: auto;
