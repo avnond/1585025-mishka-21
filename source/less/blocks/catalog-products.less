@@ -85,7 +85,6 @@
     }
   }
 
-
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
@@ -97,6 +96,16 @@
     margin: 0;
     flex-direction: column;
   }
+}
+
+.product__item:hover .product__info{
+  mix-blend-mode: normal;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product__item:active .product__info{
+  mix-blend-mode: normal;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .product__item picture{
@@ -146,6 +155,10 @@
   @media (min-width: @tablet-width) {
     margin-top: 25px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 22px;
+  }
 }
 
 .product__name{
@@ -160,6 +173,15 @@
   padding: 0;
   padding-right: 10px;
   box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 0.6;
+  }
+
+  &:active{
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width){
     width: 250px;
@@ -167,7 +189,7 @@
   }
 }
 .product__item:nth-child(3) .product__name{
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .product__specifications{
@@ -184,7 +206,12 @@
   }
 }
 
+.product__item:nth-child(3) .product__specifications{
+  margin-top: 10px;
+}
+
 .product__cost{
+  position: relative;
   margin: 0;
   margin-top: 41px;
   height: max-content;
@@ -196,6 +223,20 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     align-items: flex-end;
+  }
+}
+
+.product__cost::after{
+  left: 0;
+  top: -25px;
+  position: absolute;
+  content: "";
+  width: 204px;
+  height: 1px;
+  background-color: @special-lightgrey;
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
   }
 }
 
@@ -213,14 +254,28 @@
 //  Button
 .product__add-to-basket{
   margin: 0;
-  width: 20px;
-  height: 19px;
-  background-image: url(../img/catalog-products/catalog-basket.svg);
-  background-repeat: no-repeat;
-  background-color: transparent;
+  padding: 0;
   border: none;
+  background: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   @media (min-width: @desktop-width) {
     margin-bottom: 5px;
     margin-right: 2px;
   }
+}
+
+.product__add-to-basket:hover .product__icon{
+  fill: @lightblue;
+  opacity: 1;
+}
+
+.product__add-to-basket:active .product__icon{
+  fill: @lightblue;
+  opacity: 0.3;
+}
+
+.product__img{
+ margin-right: 0px;
 }
