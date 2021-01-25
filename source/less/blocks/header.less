@@ -401,6 +401,7 @@
 // Page Heading
 .content-heading{
   margin: 0;
+  margin-top: -4px;
   height: 283px;
   width: 100%;
   padding: 0;
@@ -432,7 +433,7 @@
     background-position: 50% 0px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/header/hero-desktop@2x.jpg");
+      background-image: url(../img/header/hero-desktop@2x.jpg);
     }
   }
 
@@ -446,11 +447,10 @@
   margin-top: 72px;
   font-size: 27px;
   line-height: 30px;
-  width: max-content;
+  width: 260px;
 
   @media (min-width: @tablet-width){
-    width: 600px;
-    margin: 0 auto;
+    width: 500px;
     margin-top: 155px;
     font-size: 43px;
     line-height: 50px;
@@ -464,11 +464,11 @@
   }
 }
 
-.content-heading__break{
-  display: none;
-
-  @media (min-width: @mobile-width) and (max-width: 767px){
-    display: block;
+.content-heading__text br{
+  margin: 0;
+  padding: 0;
+  @media (min-width: @tablet-width){
+    display: none;
   }
 }
 
@@ -496,7 +496,7 @@
   }
 }
 
-.logo-wrapper{
+.logo-block__wrapper{
   margin: 0;
   margin-left: auto;
   width: 60%;
@@ -517,7 +517,7 @@
   }
 }
 
-.logo__link{
+.logo-block__link{
   margin: 0 auto;
   margin-top: 4px;
   @media (min-width: @tablet-width){
@@ -529,11 +529,11 @@
   }
 }
 
-.logo__link:hover .logo__icon--header{
+.logo-block__link:hover .logo-block__icon-header{
   fill-opacity: 0.6;
 }
 
-.logo__link:active .logo__icon--header{
+.logo-block__link:active .logo-block__icon-header{
   fill-opacity: 0.3;
 }
 
@@ -595,7 +595,7 @@
 }
 
 // Catalog header
-.catalog__content-heading{
+.catalog-header__content-heading{
   margin: 0;
   width: 100%;
   height: 177px;
@@ -621,7 +621,7 @@
   }
 }
 
-.catalog__content-heading::after{
+.catalog-header__content-heading::after{
   @media (min-width: @tablet-width){
     content: "";
     position: absolute;
@@ -649,7 +649,7 @@
   }
 }
 
-.catalog__heading-text{
+.catalog-header__heading-text{
   margin: 0;
   margin-top: 72px;
   font-size: 27px;

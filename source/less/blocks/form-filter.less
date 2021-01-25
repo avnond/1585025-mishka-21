@@ -29,7 +29,7 @@
 
 // Fieldsets
 
-.fieldset-wrapper--other-color{
+.filter__wrapper-other-color{
   @media (min-width: @tablet-width){
     width: 100%;
     margin: 0 auto;
@@ -38,7 +38,7 @@
   }
 }
 
-.tel-email--other-color{
+.tel-email-other-color{
   @media (min-width: @tablet-width){
     margin-top: 60px;
     padding-top: 20px;
@@ -187,6 +187,7 @@
     min-height: 19px;
   }
 }
+
 
 // Color
 .filter__form-color{
@@ -341,6 +342,10 @@
     left: -72px;
     top: -4px;
   }
+}
+
+.form-color__input:focus + .form-color__check-box::before{
+  border: 2px solid @lightblue;
 }
 
 // User Name
